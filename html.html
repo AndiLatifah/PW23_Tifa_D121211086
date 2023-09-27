@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Resetting some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Clearing floats in the 'row' class */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Styling for headers */
+.header {
+  background-color: #00c33a;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Styling for the menu */
+.menu {
+  background-color: #33b5e5;
+  color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+/* Styling for the aside section */
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* Styling for the footer */
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* Responsive layout for different screen sizes */
+/* For mobile phones */
+[class*="col-"] {
+  width: 100%;
+}
+
+/* For tablets */
+@media only screen and (min-width: 600px) {
+  [class*="col-s-"] {
+    width: 100%;
+  }
+}
+
+/* For desktops */
+@media only screen and (min-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Welcome to My Homepage</h1> 
+  <p>Use the menu to select different Stylesh</p>
+</div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <li>Stylesheet 1</li>
+      <li>Stylesheet 2</li>
+      <li>Stylesheet 3</li>
+      <li>Stylesheet 4</li>
+      <li>No Stylesheet </li>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <h1>Same Page Different Stylesheet</h1>
+    <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</p>
+  </div>
+
+  <div class="col-3 col-s-12">
+    <div class="aside">
+      <h2>What?</h2>
+      <p>Chania is a city on the island of Crete.</p>
+      <h2>Where?</h2>
+      <p>Crete is a Greek island in the Mediterranean Sea.</p>
+      <h2>How?</h2>
+      <p>You can reach Chania airport from all over Europe.</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Resize the browser window to see how the content responds to resizing.</p>
+</div>
+
+</body>
+</html>
